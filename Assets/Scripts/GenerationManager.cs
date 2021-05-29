@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+using System.IO;
 public class GenerationManager : MonoBehaviour
 {
     [Header("Generators")]
@@ -41,7 +41,11 @@ public class GenerationManager : MonoBehaviour
     [Header("Prefab Saving")]
     [SerializeField]
     private string savePrefabsAt;
-    
+
+    private float pirateTotalScores = 0;
+    private float pirateRoundScores = 0;
+    private float boatTotalScores = 0;
+    private float boatRoundScores = 0;
     /// <summary>
     /// Those variables are used mostly for debugging in the inspector.
     /// </summary>
@@ -126,7 +130,7 @@ public class GenerationManager : MonoBehaviour
                     PirateLogic pirateParent = pirateParents[Random.Range(0, pirateParents.Length)];
                     pirate.Birth(pirateParent.GetData());
                 }
-
+                pirate.ApplyScalingAndWeight();
                 pirate.Mutate(mutationFactor, mutationChance);
                 pirate.AwakeUp();
             }
@@ -188,7 +192,13 @@ public class GenerationManager : MonoBehaviour
         lastBoatWinner.name += "Gen-" + generationCount; 
         lastBoatWinnerData = lastBoatWinner.GetData();
         PrefabUtility.SaveAsPrefabAsset(lastBoatWinner.gameObject, savePrefabsAt + lastBoatWinner.name + ".prefab");
-        
+        boatRoundScores = 0;
+        foreach(BoatLogic boat in _activeBoats)
+        {
+            
+            boatRoundScores += boat.GetPoints();
+        }
+        boatTotalScores += boatRoundScores;
         _activePirates.RemoveAll(item => item == null);
         _activePirates.Sort();
         _pirateParents = new PirateLogic[pirateParentSize];
@@ -198,13 +208,42 @@ public class GenerationManager : MonoBehaviour
         }
 
         PirateLogic lastPirateWinner = _activePirates[0];
+        pirateRoundScores = 0;
+        foreach (PirateLogic pirate in _activePirates)
+        {
+            pirateRoundScores += pirate.GetPoints();
+        }
+        pirateTotalScores += pirateRoundScores;
         lastPirateWinner.name += "Gen-" + generationCount; 
         lastPirateWinnerData = lastPirateWinner.GetData();
         PrefabUtility.SaveAsPrefabAsset(lastPirateWinner.gameObject, savePrefabsAt + lastPirateWinner.name + ".prefab");
-        
         //Winners:
+
+        //Storing results
+        string path = "Assets/Overallresults.txt";
+        //Write some text to the test.txt file
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine("Generations count"+generationCount+ "||Total boats:" + boatTotalScores + "||TotalPiratesScores:" + pirateTotalScores);
+        writer.Close();
+        path = "Assets/BoatsTotalScores.txt";
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(boatTotalScores);
+        writer.Close();
+        path = "Assets/PiratesTotalScores.txt";
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(pirateTotalScores);
+        writer.Close();
+        path = "Assets/BoatsRoundScores.txt";
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(boatRoundScores);
+        writer.Close();
+        path = "Assets/PiratesRoundScores.txt";
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(pirateRoundScores);
+        writer.Close();
+
         Debug.Log("Last winner boat had: " + lastBoatWinner.GetPoints() + " points!" + " Last winner pirate had: " + lastPirateWinner.GetPoints() + " points!");
-        
+        Debug.Log("Total boats:" + boatTotalScores + "||Round boats:" + boatRoundScores + "||TotalPiratesScores:" + pirateTotalScores + "||PiratesRoundScores" + pirateRoundScores);
         GenerateObjects(_boatParents, _pirateParents);
     }
 

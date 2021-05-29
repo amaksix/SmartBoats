@@ -108,10 +108,12 @@ public class AgentLogic : MonoBehaviour, IComparable
     private float boatWeight;
     [SerializeField]
     private float boatDistanceFactor;
-    [SerializeField]
-    private float enemyWeight;
+ 
     [SerializeField]
     private float enemyDistanceFactor;
+
+    [SerializeField]
+    private float enemyWeight;
 
     [Space(10)]
     [Header("Debug & Help")] 
@@ -132,8 +134,8 @@ public class AgentLogic : MonoBehaviour, IComparable
     private static float _speedInfluenceInSight = 0.1250f;
     private static float _sightInfluenceInSpeed = 0.0625f;
     private static float _maxUtilityChoiceChance = 0.85f;
+    private static float _minimalEnemyWeight = 0.1f;
     #endregion
-    
     private void Awake()
     {
         Initiate();
@@ -148,7 +150,7 @@ public class AgentLogic : MonoBehaviour, IComparable
         steps = 360 / rayRadius;
         _rigidbody = GetComponent<Rigidbody>();
     }
-    
+
     /// <summary>
     /// Copies the genes / weights from the parent.
     /// </summary>
@@ -235,6 +237,10 @@ public class AgentLogic : MonoBehaviour, IComparable
         if (Random.Range(0.0f, 100.0f) <= mutationChance)
         {
             enemyWeight += Random.Range(-mutationFactor, +mutationFactor);
+            if (gameObject.tag == "Enemy")
+            {
+                enemyWeight = Mathf.Max(enemyWeight, _minimalEnemyWeight);
+            }
         }
         if (Random.Range(0.0f, 100.0f) <= mutationChance)
         {
@@ -339,7 +345,7 @@ public class AgentLogic : MonoBehaviour, IComparable
                     utility = distanceIndex * boatDistanceFactor + boatWeight;
                     break;
                 case "Enemy":
-                    utility = distanceIndex * enemyDistanceFactor + enemyWeight;
+                    utility = RecalculateEnemyFactors(distanceIndex, enemyDistanceFactor, raycastHit.collider.gameObject);
                     break;
             }
         }
@@ -348,6 +354,10 @@ public class AgentLogic : MonoBehaviour, IComparable
         return direction;
     }
 
+    public virtual float RecalculateEnemyFactors(float distanceIndex, float enemyDistanceFactor,GameObject collidedObj)
+    {
+        return distanceIndex * enemyDistanceFactor + enemyWeight;//base for boats
+    }
     /// <summary>
     /// Activates the agent update method.
     /// Does nothing if the agent is already awake.
@@ -399,5 +409,20 @@ public class AgentLogic : MonoBehaviour, IComparable
     public AgentData GetData()
     {
         return new AgentData(steps, rayRadius, sight, movingSpeed, randomDirectionValue, boxWeight, distanceFactor, boatWeight, boatDistanceFactor, enemyWeight,  enemyDistanceFactor);
+    }
+
+    public float GetEnemyWeight( )
+    {
+       
+        return enemyWeight;
+    }
+    public float GetDistanceFactor()
+    {
+
+        return distanceFactor;
+    }
+    public void SetEnemyWeight(float weight)
+    {
+        enemyWeight = weight;
     }
 }

@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 public class BoatLogic : AgentLogic
 {
     #region Static Variables
-    private static float _boxPoints = 2.0f;
+    private static float _boxPoints = 4.0f;
     private static float _piratePoints = -100.0f;
     #endregion
     
