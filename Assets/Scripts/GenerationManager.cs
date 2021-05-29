@@ -65,8 +65,10 @@ public class GenerationManager : MonoBehaviour
     {
         if (runOnStart)
         {
+            Random.InitState(-1);
             StartSimulation();
         }
+        Debug.Log("START");
     }
     
     private void Update()
@@ -130,8 +132,13 @@ public class GenerationManager : MonoBehaviour
                     PirateLogic pirateParent = pirateParents[Random.Range(0, pirateParents.Length)];
                     pirate.Birth(pirateParent.GetData());
                 }
-                pirate.ApplyScalingAndWeight();
+                else
+                {
+                    pirate.MakeStartUpRandomSize();
+                }
+               
                 pirate.Mutate(mutationFactor, mutationChance);
+                pirate.ApplyScalingAndWeight();
                 pirate.AwakeUp();
             }
         }
@@ -173,6 +180,7 @@ public class GenerationManager : MonoBehaviour
      /// </summary>
     public void MakeNewGeneration()
     {
+        Random.InitState(generationCount);
         GenerateBoxes();
         
         //Fetch parents

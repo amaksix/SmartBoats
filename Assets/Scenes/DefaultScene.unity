@@ -1787,12 +1787,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 74.47575
-  SceleMultiplier: 0.74475753
+  ScaleMultiplier: 0
 --- !u!65 &53892029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3009,12 +3010,13 @@ MonoBehaviour:
   boatDistanceFactor: -0.3724351
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 76.60469
-  SceleMultiplier: 0.7660469
+  ScaleMultiplier: 0
 --- !u!65 &105287988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3291,6 +3293,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1.4133468
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -3833,12 +3836,13 @@ MonoBehaviour:
   boatDistanceFactor: 3.7702398
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 111.99633
-  SceleMultiplier: 1.1199633
+  ScaleMultiplier: 0
 --- !u!65 &132727952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4734,6 +4738,7 @@ MonoBehaviour:
   boatDistanceFactor: -2.8564253
   enemyDistanceFactor: 0.25565434
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -5893,12 +5898,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 105.75831
-  SceleMultiplier: 1.0575831
+  ScaleMultiplier: 0
 --- !u!65 &248344531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6465,6 +6471,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: 0.15726936
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -6957,6 +6964,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -9196,6 +9204,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: 0.28663993
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -10122,12 +10131,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 127.402466
-  SceleMultiplier: 1.2740246
+  ScaleMultiplier: 0
 --- !u!65 &484510267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11182,6 +11192,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -0.8782387
   enemyWeight: 0.7764406
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -11373,12 +11384,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: -1.0730873
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 69.709656
-  SceleMultiplier: 0.6970966
+  ScaleMultiplier: 0
 --- !u!65 &547742492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13026,6 +13038,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -16179,6 +16192,7 @@ MonoBehaviour:
   boatDistanceFactor: 1.1075044
   enemyDistanceFactor: 2.0075235
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -16291,12 +16305,13 @@ MonoBehaviour:
   boatDistanceFactor: 2.3347902
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 69.9715
-  SceleMultiplier: 0.69971496
+  ScaleMultiplier: 0
 --- !u!65 &713737199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16485,12 +16500,13 @@ MonoBehaviour:
   boatDistanceFactor: 3.3714824
   enemyDistanceFactor: 0
   enemyWeight: -3.4010015
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 148.55394
-  SceleMultiplier: 1.4855394
+  ScaleMultiplier: 0
 --- !u!65 &715169591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16928,6 +16944,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1.399513
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -18097,6 +18114,7 @@ MonoBehaviour:
   boatDistanceFactor: -2.2156982
   enemyDistanceFactor: 1.4777694
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -20636,12 +20654,13 @@ MonoBehaviour:
   boatDistanceFactor: 5.09775
   enemyDistanceFactor: -2.0131388
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 148.11075
-  SceleMultiplier: 1.4811075
+  ScaleMultiplier: 0
 --- !u!65 &881402409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21472,6 +21491,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -3.5181327
   enemyWeight: -2.3507223
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -21563,6 +21583,7 @@ MonoBehaviour:
   boatDistanceFactor: -2.4965782
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -22842,6 +22863,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -24860,6 +24882,7 @@ MonoBehaviour:
   boatDistanceFactor: -3.469316
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -25401,12 +25424,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 102.90153
-  SceleMultiplier: 1.0290153
+  ScaleMultiplier: 0
 --- !u!65 &1094447195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25494,6 +25518,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -25585,6 +25610,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: 0.122834206
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -25757,6 +25783,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -26189,12 +26216,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 107.70142
-  SceleMultiplier: 1.0770142
+  ScaleMultiplier: 0
 --- !u!65 &1126907210
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27202,6 +27230,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -4.282196
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -29842,6 +29871,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -3.6015573
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -31063,12 +31093,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 2.2122226
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 122.45803
-  SceleMultiplier: 1.2245803
+  ScaleMultiplier: 0
 --- !u!65 &1307056485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31527,12 +31558,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: -2.405025
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 130.44034
-  SceleMultiplier: 1.3044034
+  ScaleMultiplier: 0
 --- !u!65 &1336051279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33472,6 +33504,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: 1.7990751
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -34379,6 +34412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448668717}
   - component: {fileID: 1448668716}
+  - component: {fileID: 1448668718}
   m_Layer: 0
   m_Name: GenerationManager
   m_TagString: Untagged
@@ -34423,6 +34457,7 @@ MonoBehaviour:
     boatDistanceFactor: 0
     enemyWeight: 0
     enemyDistanceFactor: 0
+    size: 0
   lastPirateWinnerData:
     steps: 0
     rayRadius: 0
@@ -34435,6 +34470,7 @@ MonoBehaviour:
     boatDistanceFactor: 0
     enemyWeight: 0
     enemyDistanceFactor: 0
+    size: 0
 --- !u!4 &1448668717
 Transform:
   m_ObjectHideFlags: 0
@@ -34449,6 +34485,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448668718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448668715}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734b3060d42f5cc40b375760fe47fe85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1455127117
 GameObject:
   m_ObjectHideFlags: 0
@@ -40933,6 +40981,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -41214,6 +41263,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -41957,6 +42007,7 @@ MonoBehaviour:
   boatDistanceFactor: -0.31031466
   enemyDistanceFactor: -1
   enemyWeight: -3.6196203
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -43688,12 +43739,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 89.03219
-  SceleMultiplier: 0.8903219
+  ScaleMultiplier: 0
 --- !u!65 &1806902667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45861,6 +45913,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -2.392558
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -46142,6 +46195,7 @@ MonoBehaviour:
   boatDistanceFactor: 2.4540906
   enemyDistanceFactor: -3.95261
   enemyWeight: -1.9444747
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -46423,6 +46477,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -2.0880303
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -47909,6 +47964,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -0.65427494
   enemyWeight: -1.7109421
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -48000,6 +48056,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -2.1742496
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -48280,6 +48337,7 @@ MonoBehaviour:
   boatDistanceFactor: -2.451981
   enemyDistanceFactor: -1
   enemyWeight: -0.981709
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
@@ -48552,12 +48610,13 @@ MonoBehaviour:
   boatDistanceFactor: 2
   enemyDistanceFactor: 0
   enemyWeight: 0
+  size: 100
   visionColor: {r: 0.053266272, g: 0.5943396, b: 0.08738161, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
   Weight: 54.25981
-  SceleMultiplier: 0.5425981
+  ScaleMultiplier: 0
 --- !u!65 &2061918557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49942,6 +50001,7 @@ MonoBehaviour:
   boatDistanceFactor: 0
   enemyDistanceFactor: -1
   enemyWeight: -1
+  size: 1
   visionColor: {r: 0.21466713, g: 0.29546288, b: 0.6792453, a: 1}
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0.4433962, g: 0.39784816, b: 0.10666606, a: 1}
