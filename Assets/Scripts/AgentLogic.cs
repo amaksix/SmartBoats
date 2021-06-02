@@ -137,7 +137,7 @@ public class AgentLogic : MonoBehaviour, IComparable
     private static float _minimalMovingSpeed = 1.0f;
     private static float _speedInfluenceInSight = 0.1250f;
     private static float _sightInfluenceInSpeed = 0.0625f;
-    private static float _sizeInfluenceInSpeedAndSight = 0.5f; //And Reverse
+    private static float _sizeInfluenceInSpeedAndSight = 0.01f; //And Reverse
     private static float _maxUtilityChoiceChance = 0.85f;
     private static float _minimalSize = 50;
     #endregion
@@ -202,8 +202,12 @@ public class AgentLogic : MonoBehaviour, IComparable
             sight += sightIncrease;
             movingSpeed -= sightIncrease * _sightInfluenceInSpeed;
             movingSpeed = Mathf.Max(movingSpeed, _minimalMovingSpeed);
-            size -= sightIncrease * _sizeInfluenceInSpeedAndSight;
-            size = Mathf.Max(size, _minimalSize);
+            if(gameObject.tag == "Enemy")
+            {
+                size += sightIncrease * _sizeInfluenceInSpeedAndSight;
+                size = Mathf.Max(size, _minimalSize);
+            }
+
         }
         if (Random.Range(0.0f, 100.0f) <= mutationChance)
         {
@@ -212,8 +216,11 @@ public class AgentLogic : MonoBehaviour, IComparable
             movingSpeed = Mathf.Max(movingSpeed, _minimalMovingSpeed);
             sight -= movingSpeedIncrease * _speedInfluenceInSight;
             sight = Mathf.Max(sight, _minimalSight);
-            size -= movingSpeedIncrease * _sizeInfluenceInSpeedAndSight;
-            size = Mathf.Max(size, _minimalSize);
+            if (gameObject.tag == "Enemy")
+            {
+                size += movingSpeedIncrease * _sizeInfluenceInSpeedAndSight;
+                size = Mathf.Max(size, _minimalSize);
+            }
         }
         if (Random.Range(0.0f, 100.0f) <= mutationChance)
         {
@@ -252,10 +259,13 @@ public class AgentLogic : MonoBehaviour, IComparable
             float sizeInfluence = Random.Range(-mutationFactor, +mutationFactor);
             size += sizeInfluence;
             size = Mathf.Max(size, _minimalSize);
-            sight -= sizeInfluence * _sizeInfluenceInSpeedAndSight;
-            sight = Mathf.Max(sight, _minimalSight);
-            movingSpeed -= sizeInfluence * _sizeInfluenceInSpeedAndSight;
-            movingSpeed = Mathf.Max(movingSpeed, _minimalMovingSpeed);
+            if (gameObject.tag == "Enemy")
+            {
+                 sight += sizeInfluence * _sizeInfluenceInSpeedAndSight;
+                 sight = Mathf.Max(sight, _minimalSight);
+                 movingSpeed += sizeInfluence * _sizeInfluenceInSpeedAndSight;
+                 movingSpeed = Mathf.Max(movingSpeed, _minimalMovingSpeed);
+            }
         }
     }
 
@@ -430,10 +440,7 @@ public class AgentLogic : MonoBehaviour, IComparable
     public void MakeStartUpRandomSize()
     {
         size = Random.Range(50, 150);
-        Debug.Log(size);
-        Debug.Log(movingSpeed);
         movingSpeed *= size / 100;
-        Debug.Log(movingSpeed);
         sight *= size / 100;
     }
 }

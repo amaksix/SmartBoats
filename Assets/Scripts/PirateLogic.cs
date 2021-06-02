@@ -53,7 +53,7 @@ public class PirateLogic : AgentLogic
             if (other.gameObject.GetComponent<PirateLogic>().GetData().size < data.size)
             {
                 points += _enemyPoints;
-                other.gameObject.GetComponent<PirateLogic>().points -= _enemyPoints;
+                other.gameObject.GetComponent<PirateLogic>().points -= _enemyPoints/2;
                 Destroy(other.gameObject);
                 /* float firstShip = Random.Range(0, 100); //current ship chances
                  float secondShip = Random.Range(0, 100); //enemy ship chances

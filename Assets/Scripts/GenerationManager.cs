@@ -60,7 +60,9 @@ public class GenerationManager : MonoBehaviour
     private List<PirateLogic> _activePirates;
     private BoatLogic[] _boatParents;
     private PirateLogic[] _pirateParents;
-    
+
+    private float aVRGSpeed;
+    private float aVRGSize;
     private void Start()
     {
         if (runOnStart)
@@ -131,17 +133,51 @@ public class GenerationManager : MonoBehaviour
                 {
                     PirateLogic pirateParent = pirateParents[Random.Range(0, pirateParents.Length)];
                     pirate.Birth(pirateParent.GetData());
+                    if (aVRGSpeed == 0)
+                    {
+                        aVRGSpeed = pirate.GetData().movingSpeed;
+                        aVRGSize = pirate.GetData().size;
+                    }
+                    else
+                    {
+                        aVRGSpeed = (aVRGSpeed + pirate.GetData().movingSpeed) / 2;
+                        aVRGSize = (pirate.GetData().size + aVRGSize) / 2;
+                    }
                 }
                 else
                 {
                     pirate.MakeStartUpRandomSize();
+                    if (aVRGSpeed == 0)
+                    {
+                        aVRGSpeed = pirate.GetData().movingSpeed;
+                        aVRGSize = pirate.GetData().size;
+                    }
+                    else
+                    {
+                        aVRGSpeed = (aVRGSpeed + pirate.GetData().movingSpeed) / 2;
+                        aVRGSize = (pirate.GetData().size+aVRGSize)/2;
+                    }
                 }
                
                 pirate.Mutate(mutationFactor, mutationChance);
                 pirate.ApplyScalingAndWeight();
                 pirate.AwakeUp();
+               
+             
             }
-        }
+        }      
+        string path = "Assets/PiratesAvrgSpeed.txt";
+        //Write some text to the test.txt file
+        StreamWriter writer = new StreamWriter(path, true);
+        writer.WriteLine(aVRGSpeed);
+        Debug.Log(aVRGSpeed);
+        writer.Close();
+        path = "Assets/PiratesAvrgSize.txt";
+        //Write some text to the test.txt file
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(aVRGSize);
+        Debug.Log(aVRGSize);
+        writer.Close();
     }
 
      /// <summary>
@@ -181,6 +217,8 @@ public class GenerationManager : MonoBehaviour
     public void MakeNewGeneration()
     {
         Random.InitState(generationCount);
+        Debug.Log(Random.Range(0, 100));
+        Debug.Log("Added random seed"+generationCount.ToString());
         GenerateBoxes();
         
         //Fetch parents
