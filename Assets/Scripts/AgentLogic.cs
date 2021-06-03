@@ -216,7 +216,7 @@ public class AgentLogic : MonoBehaviour, IComparable
             movingSpeed = Mathf.Max(movingSpeed, _minimalMovingSpeed);
             sight -= movingSpeedIncrease * _speedInfluenceInSight;
             sight = Mathf.Max(sight, _minimalSight);
-            if (gameObject.tag == "Enemy")
+           if (gameObject.tag == "Enemy")
             {
                 size += movingSpeedIncrease * _sizeInfluenceInSpeedAndSight;
                 size = Mathf.Max(size, _minimalSize);

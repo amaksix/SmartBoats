@@ -1792,7 +1792,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 74.47575
   ScaleMultiplier: 0
 --- !u!65 &53892029
 BoxCollider:
@@ -3015,7 +3014,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 76.60469
   ScaleMultiplier: 0
 --- !u!65 &105287988
 BoxCollider:
@@ -3841,7 +3839,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 111.99633
   ScaleMultiplier: 0
 --- !u!65 &132727952
 BoxCollider:
@@ -5903,7 +5900,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 105.75831
   ScaleMultiplier: 0
 --- !u!65 &248344531
 BoxCollider:
@@ -10136,7 +10132,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 127.402466
   ScaleMultiplier: 0
 --- !u!65 &484510267
 BoxCollider:
@@ -11389,7 +11384,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 69.709656
   ScaleMultiplier: 0
 --- !u!65 &547742492
 BoxCollider:
@@ -16310,7 +16304,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 69.9715
   ScaleMultiplier: 0
 --- !u!65 &713737199
 BoxCollider:
@@ -16505,7 +16498,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 148.55394
   ScaleMultiplier: 0
 --- !u!65 &715169591
 BoxCollider:
@@ -20659,7 +20651,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 148.11075
   ScaleMultiplier: 0
 --- !u!65 &881402409
 BoxCollider:
@@ -25429,7 +25420,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 102.90153
   ScaleMultiplier: 0
 --- !u!65 &1094447195
 BoxCollider:
@@ -26221,7 +26211,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 107.70142
   ScaleMultiplier: 0
 --- !u!65 &1126907210
 BoxCollider:
@@ -31098,7 +31087,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 122.45803
   ScaleMultiplier: 0
 --- !u!65 &1307056485
 BoxCollider:
@@ -31563,7 +31551,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 130.44034
   ScaleMultiplier: 0
 --- !u!65 &1336051279
 BoxCollider:
@@ -34412,7 +34399,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1448668717}
   - component: {fileID: 1448668716}
-  - component: {fileID: 1448668718}
   m_Layer: 0
   m_Name: GenerationManager
   m_TagString: Untagged
@@ -34436,9 +34422,9 @@ MonoBehaviour:
   - {fileID: 1204097874}
   boatGenerator: {fileID: 1829776929}
   pirateGenerator: {fileID: 1003293718}
-  mutationFactor: 3.5
+  mutationFactor: 5
   mutationChance: 35
-  boatParentSize: 5
+  boatParentSize: 2
   pirateParentSize: 2
   simulationTimer: 5
   simulationCount: 0
@@ -34485,18 +34471,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1448668718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448668715}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734b3060d42f5cc40b375760fe47fe85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1455127117
 GameObject:
   m_ObjectHideFlags: 0
@@ -43744,7 +43718,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 89.03219
   ScaleMultiplier: 0
 --- !u!65 &1806902667
 BoxCollider:
@@ -48615,7 +48588,6 @@ MonoBehaviour:
   foundColor: {r: 0.59033465, g: 0.59780955, b: 0.6226415, a: 1}
   directionColor: {r: 0, g: 0, b: 0, a: 1}
   debug: 1
-  Weight: 54.25981
   ScaleMultiplier: 0
 --- !u!65 &2061918557
 BoxCollider:

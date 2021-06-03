@@ -146,7 +146,7 @@ public class GenerationManager : MonoBehaviour
                 }
                 else
                 {
-                    pirate.MakeStartUpRandomSize();
+                   pirate.MakeStartUpRandomSize();
                     if (aVRGSpeed == 0)
                     {
                         aVRGSpeed = pirate.GetData().movingSpeed;
