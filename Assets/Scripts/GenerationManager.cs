@@ -44,8 +44,10 @@ public class GenerationManager : MonoBehaviour
 
     private float pirateTotalScores = 0;
     private float pirateRoundScores = 0;
+    private float pirateAvrgRoundScore = 0;
     private float boatTotalScores = 0;
     private float boatRoundScores = 0;
+    private float boatAvrgRoundScore = 0;
     /// <summary>
     /// Those variables are used mostly for debugging in the inspector.
     /// </summary>
@@ -63,11 +65,15 @@ public class GenerationManager : MonoBehaviour
 
     private float aVRGSpeed;
     private float aVRGSize;
+    private void Awake()
+    {
+        Random.InitState(3);
+    }
     private void Start()
     {
+        
         if (runOnStart)
         {
-            Random.InitState(-1);
             StartSimulation();
         }
         Debug.Log("START");
@@ -146,7 +152,7 @@ public class GenerationManager : MonoBehaviour
                 }
                 else
                 {
-                   pirate.MakeStartUpRandomSize();
+                    pirate.MakeStartUpRandomSize();
                     if (aVRGSpeed == 0)
                     {
                         aVRGSpeed = pirate.GetData().movingSpeed;
@@ -216,7 +222,7 @@ public class GenerationManager : MonoBehaviour
      /// </summary>
     public void MakeNewGeneration()
     {
-        Random.InitState(generationCount);
+        Random.InitState(3);
         Debug.Log(Random.Range(0, 100));
         Debug.Log("Added random seed"+generationCount.ToString());
         GenerateBoxes();
@@ -228,37 +234,66 @@ public class GenerationManager : MonoBehaviour
         {
             GenerateBoats(_boatParents);
         }
-        _boatParents = new BoatLogic[boatParentSize];
-        for (int i = 0; i < boatParentSize; i++)
+        if (boatParentSize < _activeBoats.Count)
         {
-            _boatParents[i] = _activeBoats[i];
+            _boatParents = new BoatLogic[boatParentSize];
+            for (int i = 0; i < boatParentSize; i++)
+            {
+                _boatParents[i] = _activeBoats[i];
+            }
         }
+        else
+        {
+            _boatParents = new BoatLogic[_activeBoats.Count];
+            for (int i = 0; i < _activeBoats.Count; i++)
+            {
+                _boatParents[i] = _activeBoats[i];
+            }
+        }
+       
 
         BoatLogic lastBoatWinner = _activeBoats[0];
         lastBoatWinner.name += "Gen-" + generationCount; 
         lastBoatWinnerData = lastBoatWinner.GetData();
         PrefabUtility.SaveAsPrefabAsset(lastBoatWinner.gameObject, savePrefabsAt + lastBoatWinner.name + ".prefab");
         boatRoundScores = 0;
+        boatAvrgRoundScore = 0;
         foreach(BoatLogic boat in _activeBoats)
         {
-            
+        
             boatRoundScores += boat.GetPoints();
         }
+        boatAvrgRoundScore =Mathf.Round( boatRoundScores / _activeBoats.Count*100)/100;
         boatTotalScores += boatRoundScores;
         _activePirates.RemoveAll(item => item == null);
         _activePirates.Sort();
-        _pirateParents = new PirateLogic[pirateParentSize];
-        for (int i = 0; i < pirateParentSize; i++)
+        if (pirateParentSize < _activePirates.Count)
         {
-            _pirateParents[i] = _activePirates[i];
+            _pirateParents = new PirateLogic[pirateParentSize];
+            for (int i = 0; i < pirateParentSize; i++)
+            {
+                _pirateParents[i] = _activePirates[i];
+            }
         }
+        else
+        {
+            _pirateParents = new PirateLogic[_activePirates.Count];
+            for (int i = 0; i < _activePirates.Count; i++)
+            {
+                _pirateParents[i] = _activePirates[i];
+            }
+        }
+    
 
         PirateLogic lastPirateWinner = _activePirates[0];
         pirateRoundScores = 0;
+        pirateAvrgRoundScore = 0;
         foreach (PirateLogic pirate in _activePirates)
         {
             pirateRoundScores += pirate.GetPoints();
+      
         }
+        pirateAvrgRoundScore = Mathf.Round( pirateRoundScores / _activePirates.Count*100)/100;
         pirateTotalScores += pirateRoundScores;
         lastPirateWinner.name += "Gen-" + generationCount; 
         lastPirateWinnerData = lastPirateWinner.GetData();
@@ -287,9 +322,17 @@ public class GenerationManager : MonoBehaviour
         writer = new StreamWriter(path, true);
         writer.WriteLine(pirateRoundScores);
         writer.Close();
+        path = "Assets/AVRGBoatsRoundScores.txt";
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(boatAvrgRoundScore);
+        writer.Close();
+        path = "Assets/PirateAvrgRoundScoretxt";
+        writer = new StreamWriter(path, true);
+        writer.WriteLine(pirateAvrgRoundScore);
+        writer.Close();
 
         Debug.Log("Last winner boat had: " + lastBoatWinner.GetPoints() + " points!" + " Last winner pirate had: " + lastPirateWinner.GetPoints() + " points!");
-        Debug.Log("Total boats:" + boatTotalScores + "||Round boats:" + boatRoundScores + "||TotalPiratesScores:" + pirateTotalScores + "||PiratesRoundScores" + pirateRoundScores);
+        Debug.Log("Total boats:" + boatTotalScores + "||Round boats:" + boatRoundScores+"||average score this round:"+boatAvrgRoundScore + "||TotalPiratesScores:" + pirateTotalScores + "||PiratesRoundScores" + pirateRoundScores+"||pirate avrg score this round"+pirateAvrgRoundScore);
         GenerateObjects(_boatParents, _pirateParents);
     }
 

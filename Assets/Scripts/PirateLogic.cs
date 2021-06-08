@@ -38,7 +38,7 @@ public class PirateLogic : AgentLogic
         }
         return distanceIndex * enemyDistanceFactor + GetData().enemyWeight;
     }
-
+ 
     private void OnCollisionEnter(Collision other)
     {
         AgentData data = this.GetData();
@@ -55,24 +55,6 @@ public class PirateLogic : AgentLogic
                 points += _enemyPoints;
                 other.gameObject.GetComponent<PirateLogic>().points -= _enemyPoints/2;
                 Destroy(other.gameObject);
-                /* float firstShip = Random.Range(0, 100); //current ship chances
-                 float secondShip = Random.Range(0, 100); //enemy ship chances
-                 firstShip *= ScaleMultiplier;
-                 secondShip *= other.gameObject.GetComponent<PirateLogic>().ScaleMultiplier;
-                 Debug.Log("Killed pirate");
-                 if (firstShip > secondShip)
-                 {
-                     points += _enemyPoints;
-                     other.gameObject.GetComponent<PirateLogic>().points -= _enemyPoints/2;
-                     Destroy(other.gameObject);
-                 }
-                 else
-                 {
-                     points -= _enemyPoints;
-                     other.gameObject.GetComponent<PirateLogic>().points += _enemyPoints;
-                     Destroy(gameObject);
-                 }*/
-
             }
 
 
